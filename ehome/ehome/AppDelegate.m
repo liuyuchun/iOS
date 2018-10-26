@@ -7,8 +7,10 @@
 //
 
 #import "AppDelegate.h"
-
+#import "TabBarController.h"
+#import "HomeController.h"
 @interface AppDelegate ()
+
 
 @end
 
@@ -16,7 +18,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
+     UINavigationController *HomeNav = [[UINavigationController alloc]initWithRootViewController:[[HomeController alloc] init]];
+    self.window.rootViewController = HomeNav;
+    self.window.backgroundColor = [UIColor whiteColor];
+    
     return YES;
 }
 

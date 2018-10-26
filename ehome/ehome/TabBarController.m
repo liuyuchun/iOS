@@ -7,6 +7,9 @@
 //
 
 #import "TabBarController.h"
+#import "HomeController.h"
+#import "NoticeController.h"
+#import "MineController.h"
 
 @interface TabBarController ()
 
@@ -16,7 +19,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    UITabBarController *tabBar = [[UITabBarController alloc] init];
+    UINavigationController *HomeNav = [[UINavigationController alloc]initWithRootViewController:[[HomeController alloc] init]];
+    UINavigationController *NoticeNav = [[UINavigationController alloc]initWithRootViewController:[[NoticeController alloc] init]];
+    UINavigationController *MineNav = [[UINavigationController alloc]initWithRootViewController:[[MineController alloc] init]];
 }
 
 - (void)didReceiveMemoryWarning {
