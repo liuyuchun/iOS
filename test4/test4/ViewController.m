@@ -19,6 +19,7 @@
     // Do any additional setup after loading the view.
     
     NSLog(@"新增的语句");
+    NSLog(@"又一次新增数据");
 }
 
 
